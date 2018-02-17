@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.udacity.sandwichclub.model.Sandwich;
 import com.udacity.sandwichclub.utils.JsonUtils;
@@ -45,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 if (position != DEFAULT_POSITION) {
                     launchDetailActivity(position);
+                }else{
+                    Toast.makeText(MainActivity.this, R.string.detail_error_message, Toast.LENGTH_SHORT).show();
                 }
             }
         });

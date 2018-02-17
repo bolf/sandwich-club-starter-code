@@ -8,8 +8,8 @@ public class CommonUtils {
 
         if(lst.size() > 0) {
             StringBuilder builder = new StringBuilder();
-            for (String tmpAka : lst) {
-                builder.append(tmpAka).append(", ");
+            for (String tmpStr : lst) {
+                builder.append(tmpStr).append(", ");
             }
             builder.delete(builder.length() - 2, builder.length());
             result = builder.toString();
